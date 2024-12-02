@@ -84,7 +84,7 @@ for fail in failed:
 if len(failed) > 0:
     sys.exit(1)
 
-cmd = f"zip {PROJECT_CONFIG["submissionName"]}"
+cmd = f"bash -c \"zip {PROJECT_CONFIG["submissionName"]}"
 
 for f in os.listdir("."):
     if f.startswith("driver."):
@@ -92,7 +92,7 @@ for f in os.listdir("."):
 
     if any(map(lambda x: f.endswith(x), PROJECT_CONFIG["sourceFiles"])):
         cmd += f" {file}"
-
+cmd += "\""
 os.system(cmd)
 
 print(f"Zipped Submission to {PROJECT_CONFIG["submissionName"]}.zip")
