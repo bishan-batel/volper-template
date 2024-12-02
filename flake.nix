@@ -20,7 +20,7 @@
             cmake
             python3
             valgrind
-            gcc8
+            gcc
             xxd
           ];
 
