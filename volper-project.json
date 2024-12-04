@@ -1,6 +1,6 @@
 {
   "makeTargets": [
-    "all"
+    "gcc0"
   ],
   "submissionName": "submission",
   "sourceFiles": [
