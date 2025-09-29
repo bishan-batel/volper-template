@@ -50,6 +50,8 @@ def get_test_count():
             return count
 
 
+os.system("cmake --preset volper")
+
 print("Compiling with Makefile")
 
 if len(PROJECT_CONFIG["makeTargets"]) == 0:

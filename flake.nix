@@ -19,10 +19,9 @@
             ninja
             cmake
             python3
-            valgrind
             gcc
             xxd
-          ];
+          ] ++ (if pkgs.stdenv.isDarwin then [] else [ valgrind ]);
 
           buildInputs = with pkgs; [
             llvmPackages.clang-tools
